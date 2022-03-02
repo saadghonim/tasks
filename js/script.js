@@ -1,15 +1,13 @@
-let theName = "ahmed";
-let theGender = "female";
-let theAge = 30;
+let userInfo = document.getElementById("user_info");
+let userDom = document.getElementById("user");
+let links = document.getElementById("links");
 
+let usern = localStorage.getItem("username");
 
+if(usern){
+    links.remove();
+    userInfo.style.display = "block";
+    userDom.innerHTML = usern;
+}
 
-theGender === "male" ? console.log("Mr") : console.log("Mrs")
-
-theAge < 20
-    ? console.log(20) 
-    : theAge > 20 && theAge < 60 
-    ? console.log("20 to 60") 
-    : theAge > 60 
-    ? console.log("largar than 60") 
-    : console.log("UnKnown")
+console.log(localStorage)
