@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.m_P_gh{
+  margin: 0;
+  padding:0;
+}
 body{
   font-family: 'Oswald', sans-serif;
 }
@@ -46,13 +50,13 @@ nav ul#user_info{
   left: 50%;
   width: 40%;
   text-align: center;
-  background-color: #bc6ff1;
+  background-color: #120b16;
   padding: 20px;
 }
 .section_form h2{
   font-size: 50px;
   letter-spacing: 2px;
-  color: #57057b;
+  color: #8b41aa;
 }
 
 
@@ -78,7 +82,47 @@ nav ul#user_info{
 }
 .section_form form input:hover ,
 .section_form form input:focus{
-  border-color: #57057b;
+  border-color: #fc0505;
   outline: 0;
+}
+.products{
+  width: 50%;
+  padding: 10px 0;
+}
+.products-item{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.products-item img{
+  margin-inline-end: 10px;
+}
+.products-item-desc-action{
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.products-item .add-to-cart{
+  display: block;
+  margin-left: auto;
+  background-color: #57057b;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+}
 
+.products-item-desc-action .favorite{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  color: #57057b;
 }
