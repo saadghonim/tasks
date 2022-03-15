@@ -24,13 +24,13 @@ btnSignUp.addEventListener("click", function(e){
 let eye = document.querySelector("#eyes_");
 let eyse_s = document.querySelector("#eyse_s");
 
-eye.addEventListener("click", function(){
+eyse_s.addEventListener("click", function(){
   password.setAttribute("type", "text");
   this.style.display = "none";
-  eyse_s.style.display = "block";
+  eye.style.display = "block";
 })
-eyse_s.addEventListener("click", function(){
+eye.addEventListener("click", function(){
   password.setAttribute("type", "password");
   this.style.display = "none";
-  eye.style.display = "block";
+  eyse_s.style.display = "block";
 })
