@@ -21,15 +21,16 @@ btnSignUp.addEventListener("click", function(e){
   }
 })
 
-// btnSignUp.addEventListener("foucs", function(e){
-//   e.preventDefault();
-//   if(username.value === "" || email.value === "" || password.value === ""){
-    
+let eye = document.querySelector("#eyes_");
+let eyse_s = document.querySelector("#eyse_s");
 
-
-//   }else{
-
-
-//   }
-  
-// })
+eye.addEventListener("click", function(){
+  password.setAttribute("type", "text");
+  this.style.display = "none";
+  eyse_s.style.display = "block";
+})
+eyse_s.addEventListener("click", function(){
+  password.setAttribute("type", "password");
+  this.style.display = "none";
+  eye.style.display = "block";
+})

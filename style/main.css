@@ -85,6 +85,13 @@ nav ul#user_info{
   border-color: #fc0505;
   outline: 0;
 }
+.section_form form i{
+  color: #ffffff;
+  cursor: pointer;
+}
+#eyse_s{
+  display: none;
+}
 .products{
   width: 50%;
   padding: 10px 0;
@@ -115,7 +122,6 @@ nav ul#user_info{
   padding: 10px 20px;
   font-size: 14px;
 }
-
 .products-item-desc-action .favorite{
   cursor: pointer;
   width: 30px;
@@ -126,3 +132,4 @@ nav ul#user_info{
   margin-left: auto;
   color: #57057b;
 }
+
