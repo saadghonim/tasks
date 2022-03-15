@@ -48,11 +48,23 @@ let products = [
     imageUrl: "images/5.jpg"
   },
 ]
-
 function drawprouductsUI (){
-  let proudctUI = products.map((item) => {
+  let productUI = products.map((item) => {
     return`
-    
+    <div class="products-item">
+    <img src="${item.imageUrl}" alt="products">
+    <div class="products-item-desc">
+      <h2 class="m_P_gh">${item.title}</h2>
+      <p class="m_P_gh">Lorem ipsum dolor sit amet consectetur </p>
+      <span>${item.size}</span>
+    </div>
+    <div class="products-item-desc-action">
+      <button class="add-to-cart">add to cart</button>
+      <i class="favorite fa fa-heart"></i>
+    </div>
+  </div>
     `
   })
+  prodcutsDom.innerHTML = productUI;
 }
+drawprouductsUI()
