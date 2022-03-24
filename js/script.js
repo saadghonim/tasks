@@ -59,7 +59,7 @@ function drawprouductsUI (){
       <span>${item.size}</span>
     </div>
     <div class="products-item-desc-action">
-      <button class="add-to-cart">add to cart</button>
+      <button class="add-to-cart" onclick="addedToCart(${item.id})">add to cart</button>
       <i class="favorite fa fa-heart"></i>
     </div>
   </div>
@@ -67,4 +67,16 @@ function drawprouductsUI (){
   })
   prodcutsDom.innerHTML = productUI;
 }
-drawprouductsUI()
+drawprouductsUI();
+
+function addedToCart(id) {
+let shoosenItem = products.find((item) => item.id === id);
+console.log(shoosenItem)
+}
+function chickLogedUser(){
+  if(localStorage.getItem("username")){
+    window.location = "cartprouducts.html"
+  }else{
+    window.location = "login.html"
+  }
+}
