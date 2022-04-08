@@ -128,6 +128,9 @@ nav ul#user_info {
   margin-left: auto;
   color: #57057b;
 }
+.m_p_gh {
+  margin: 0;
+}
 
 nav i {
   color: #fff;
