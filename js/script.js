@@ -2,8 +2,11 @@ let links = document.getElementById("links");
 let user_info = document.getElementById("user_info");
 let user_ = document.getElementById("user");
 let  signout = document.getElementById("signout");
-
+let cartsProuductsDom = document.querySelector(".carts_prouducts div")
+let cartsProuductsMenu = document.querySelector(".carts_prouducts")
+let badgeDom = document.querySelector(".badge")
 let getuser = localStorage.getItem("username");
+let shoppingCartIcon = document.querySelector(".shoppingCart")
 if(getuser){
     links.remove();
     user_info.style.display = "flex";
@@ -49,7 +52,6 @@ let products = [
   },
 ]
 
-
 function drawprouductsUI (){
   let productUI = products.map((item) => {
     return`
@@ -71,13 +73,13 @@ function drawprouductsUI (){
 }
 drawprouductsUI();
 
-
-
 function addedToCart(id) {
 let shoosenItem = products.find((item) => item.id === id);
-console.log(shoosenItem)
+cartsProuductsDom.innerHTML += `<p>${shoosenItem.title}</p>`
 
-
+let cartprouductsItem = document.querySelectorAll(".carts_prouducts div p");
+badgeDom.style.display = "block";
+badgeDom.innerHTML = cartprouductsItem.length;
 }
 function chickLogedUser(){
   if(localStorage.getItem("username")){
@@ -86,111 +88,9 @@ function chickLogedUser(){
     window.location = "login.html"
   }
 }
-
-
-let produtctsN = [
-  {
-    id: 11,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-  },
-  {
-    id: 12,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-  {
-    id: 13,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-  {
-    id: 14,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-  {
-    id: 15,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-  {
-    id: 16,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-  {
-    id: 17,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-  {
-    id: 18,
-    href: "#",
-    imageUrl2: "images/new/1.png",
-    btn: "أضف للسلة",
-    price:"500 ريال",
-    priceOff:"300 ريال",
-    ancNew: "فلتر منزلي 5 مراحل"
-
-  },
-]
-
-let newDom = document.querySelector(".new");
-
-function nowProudctsUi (){
-  let NewUi = produtctsN.map((el) => {
-    return`
-    <div class="div_item">
-    <a href="${el.href}" class="anc_new anc_gh">
-      <img src="${el.imageUrl2}">
-      <button class="btn_gh bt_new">
-        <i class="fas fa-shopping-basket"></i>
-        ${el.btn}
-      </button>
-    </a>
-    <a href="#" class="anc_new_name anc_gh">${el.ancNew}</a>
-    <div class="price">
-      <span>${el.price}</span>
-      <p class="m_p_gh">${el.priceOff}</p>
-    </div>
-  </div>
-    `
-  })
-  newDom.innerHTML = NewUi;
+shoppingCartIcon.addEventListener("click", openCartMenu);
+function openCartMenu (){
+  if(cartsProuductsDom.innerHTML != ""){
+    cartsProuductsMenu.style.display = "block";
+  }
 }
-nowProudctsUi();
