@@ -91,6 +91,11 @@ function chickLogedUser(){
 shoppingCartIcon.addEventListener("click", openCartMenu);
 function openCartMenu (){
   if(cartsProuductsDom.innerHTML != ""){
-    cartsProuductsMenu.style.display = "block";
+    if(cartsProuductsMenu.style.display == "block"){
+      cartsProuductsMenu.style.display = "none";
+    }else{
+      cartsProuductsMenu.style.display = "block";
+
+    }
   }
 }

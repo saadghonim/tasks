@@ -178,3 +178,32 @@ nav i {
   padding: 5px;
   text-decoration: none;
 }
+.icon_main span{
+  width: 200px;
+  height: 200px;
+  display: block;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+  transition: .5s;
+
+}
+.anc_icons{
+  text-align: center;
+  transition: .5s;
+  margin-inline-end: 100px;
+}
+
+.icon_main{
+  display: flex;
+
+}
+.anc_icons:hover span{
+  border-color: #fc0505;
+}
+.anc_icons:hover{
+  color: #fc0505;
+}
