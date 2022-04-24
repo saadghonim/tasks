@@ -95,7 +95,6 @@ function openCartMenu (){
       cartsProuductsMenu.style.display = "none";
     }else{
       cartsProuductsMenu.style.display = "block";
-
     }
   }
 }
